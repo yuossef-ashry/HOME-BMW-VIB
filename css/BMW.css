@@ -110,33 +110,35 @@ a {
   z-index: -1;
   transition: 0.3s;
 }
-.main-button:hover {
-  padding-right: 90px;
-}
-.main-button:hover::before {
-  background-color: var(--secondary-color);
-  top: 8px;
-  left: 9px;
-}
 .main-button i {
   position: absolute;
   left: 178px;
   top: 25%;
   transition: var(--main-transition);
 }
-.main-button:hover i {
-  color: var(--secondary-color);
-}
-.main-button:hover i.one {
-  animation: go 0.8s alternate linear infinite;
-}
-.main-button:hover i.two {
-  left: 187px;
-  animation: go 0.8s alternate 0.4s linear infinite;
-}
-.main-button:hover i.three {
-  left: 196px;
-  animation: go 0.8s alternate 0.8s linear infinite;
+@media (min-width: 992px) {
+  .main-button:hover {
+    padding-right: 90px;
+  }
+  .main-button:hover::before {
+    background-color: var(--secondary-color);
+    top: 8px;
+    left: 9px;
+  }
+  .main-button:hover i {
+    color: var(--secondary-color);
+  }
+  .main-button:hover i.one {
+    animation: go 0.8s alternate linear infinite;
+  }
+  .main-button:hover i.two {
+    left: 187px;
+    animation: go 0.8s alternate 0.4s linear infinite;
+  }
+  .main-button:hover i.three {
+    left: 196px;
+    animation: go 0.8s alternate 0.8s linear infinite;
+  }
 }
 @media (max-width: 991px) {
   .main-button {
@@ -144,12 +146,6 @@ a {
   }
   .main-button i {
     left: 160px;
-  }
-  .main-button:hover i.two {
-    left: 169px;
-  }
-  .main-button:hover i.three {
-    left: 178px;
   }
 }
 @media (max-width: 767px) {
@@ -170,11 +166,6 @@ a {
   transform: scale(0.9);
   position: relative;
   overflow: hidden;
-}
-.second-button:hover {
-  background-color: var(--main-color);
-  border-radius: 10px;
-  transform: scale(1);
 }
 .second-button::before {
   content: "\f061";
@@ -200,12 +191,6 @@ a {
   transition: 0.3s;
   color: var(--main-color);
 }
-.second-button:hover::after {
-  right: -18px;
-}
-.second-button:hover::before {
-  left: 25px;
-}
 .second-button span {
   font-size: 17px;
   color: var(--main-color);
@@ -214,14 +199,27 @@ a {
   top: 16px;
   transition: 0.3s;
 }
-.second-button:hover span {
-  left: 60px;
-  color: var(--secondary-color);
+@media (min-width: 992px) {
+  .second-button:hover {
+    background-color: var(--main-color);
+    border-radius: 10px;
+    transform: scale(1);
+  }
+  .second-button:hover::after {
+    right: -18px;
+  }
+  .second-button:hover::before {
+    left: 25px;
+  }
+  .second-button:hover span {
+    left: 60px;
+    color: var(--secondary-color);
+  }
 }
 /* End Global Rules */
 /* Start header */
 header {
-  box-shadow: 0 0 20px var(--main-color);
+   box-shadow: 0 0 20px var(--main-color);
 }
 header .container {
   display: flex;
@@ -816,8 +814,10 @@ header .nav > li > a:hover::before {
   transition: var(--main-transition);
   line-height: 1.5;
 }
-.customer .section .opinion .text p:hover {
-  transform: scale(1.1);
+@media (min-width: 992px) {
+  .customer .section .opinion .text p:hover {
+    transform: scale(1.1);
+  }
 }
 .customer .section .opinion .text span {
   display: block;
@@ -965,43 +965,39 @@ header .nav > li > a:hover::before {
   z-index: -1;
   transition: 0.3s;
 }
-.contact form button:hover {
-  padding-right: 70px;
-}
-.contact form button:hover::before {
-  background-color: var(--secondary-color);
-  top: 8px;
-  left: 9px;
-}
 .contact form button i {
   position: absolute;
   left: 180px;
   top: 25%;
   transition: var(--main-transition);
 }
-.contact form button:hover i {
-  color: var(--secondary-color);
-}
-.contact form button:hover i.one {
-  animation: go 0.8s alternate linear infinite;
-}
-.contact form button:hover i.two {
-  left: 189px;
-  animation: go 0.8s alternate 0.4s linear infinite;
-}
-.contact form button:hover i.three {
-  left: 198px;
-  animation: go 0.8s alternate 0.8s linear infinite;
+@media (min-width: 992px) {
+  .contact form button:hover {
+    padding-right: 70px;
+  }
+  .contact form button:hover::before {
+    background-color: var(--secondary-color);
+    top: 8px;
+    left: 9px;
+  }
+  .contact form button:hover i {
+    color: var(--secondary-color);
+  }
+  .contact form button:hover i.one {
+    animation: go 0.8s alternate linear infinite;
+  }
+  .contact form button:hover i.two {
+    left: 189px;
+    animation: go 0.8s alternate 0.4s linear infinite;
+  }
+  .contact form button:hover i.three {
+    left: 198px;
+    animation: go 0.8s alternate 0.8s linear infinite;
+  }
 }
 @media (max-width: 767px) {
   .contact form button i {
     left: 160px;
-  }
-  .contact form button:hover i.two {
-    left: 169px;
-  }
-  .contact form button:hover i.three {
-    left: 178px;
   }
 }
 .contact .info {
@@ -1068,6 +1064,12 @@ footer .image:hover {
 }
 footer .image img {
   max-width: 100%;
+}
+@media (max-width: 767px) {
+  footer .links:last-of-type {
+    border-top: 1px solid rgba(255, 255, 255, 0.37);
+    margin-top: -50px;
+  }
 }
 footer .links li:not(:last-child) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.37);
