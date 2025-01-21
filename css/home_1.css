@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        font-family: "Bebas Neue", serif;
+        font-size: 90px;
+        top: 50%;
+        bottom: 50%;
+        letter-spacing: 10px;
+      }
+      div {
+        text-align: center;
+      }
+      .span_1 {
+        color: red;
+      }
+      .span_2 {
+        color: white;
+      }
+      .span_3 {
+        color: #024caa;
+      }
+      img {
+        width: 80px;
+        height: 80px;
+      }
+      .wrapper {
+        display: inline-flex;
+        list-style: none;
+        height: 120px;
+        width: 100%;
+        padding-top: 40px;
+        font-family: "Poppins", sans-serif;
+        justify-content: center;
+      }
+
+      .wrapper .icon {
+        position: relative;
+        background: #ff0000;
+        border-radius: 50%;
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      .wrapper .tooltip {
+        position: absolute;
+        top: 0;
+        font-size: 14px;
+        background: #fff;
+        color: #fff;
+        padding: 5px 8px;
+        border-radius: 5px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      .wrapper .tooltip::before {
+        position: absolute;
+        content: "";
+        height: 8px;
+        width: 8px;
+        background: #fff;
+        bottom: -3px;
+        left: 50%;
+        transform: translate(-50%) rotate(45deg);
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      .wrapper .icon:hover .tooltip {
+        top: -45px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .wrapper .icon:hover span,
+      .wrapper .icon:hover .tooltip {
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+      }
+
+      .wrapper .facebook:hover,
+      .wrapper .facebook:hover .tooltip,
+      .wrapper .facebook:hover .tooltip::before {
+        background: #024caa;
+        color: #fff;
+      }
+
+      .wrapper .twitter:hover,
+      .wrapper .twitter:hover .tooltip,
+      .wrapper .twitter:hover .tooltip::before {
+        background: #024caa;
+        color: #fff;
+      }
+
+      .wrapper .instagram:hover,
+      .wrapper .instagram:hover .tooltip,
+      .wrapper .instagram:hover .tooltip::before {
+        background: #024caa;
+        color: #fff;
+      }
+      .bhjk {
+        align-content: center;
+        padding-top: 100px;
+      }
+      /* From Uiverse.io by suleymanlaarabidev */
+      a {
+        text-decoration: none;
+        color: red;
+      }
+      .card_mn {
+        display: inline-flex;
+      }
+      .card {
+        width: 190px;
+        height: 40px;
+        text-align: center;
+
+        background: #024caa;
+        transition: all 0.4s;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+        font-size: 30px;
+        font-weight: 900;
+      }
+
+      .card:hover {
+        border-radius: 15px;
+        cursor: pointer;
+        transform: scale(1.2);
+        color: #024caa;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+        background: red;
+      }
+
+      .first-content {
+        height: 100%;
+        width: 100%;
+        transition: all 0.4s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        border-radius: 15px;
+      }
+
+      .card:hover .first-content {
+        height: 0px;
+        opacity: 0;
+      }
+
+      .second-content {
+        height: 0%;
+        width: 100%;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        transition: all 0.4s;
+        font-size: 0px;
+        transform: rotate(90deg) scale(-1);
+      }
+
+      .card:hover .second-content {
+        opacity: 1;
+        height: 100%;
+        font-size: 1.8rem;
+        transform: rotate(0deg);
+      }
